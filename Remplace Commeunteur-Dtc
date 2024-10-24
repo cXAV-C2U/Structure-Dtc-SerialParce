@@ -1,0 +1,72 @@
+using System;
+
+class Program
+{
+    static void Main(string[] args)
+    {
+        // Define variables
+        int mlp = 1, dtc = 2, Remplace = 3, Set = 4;
+        int Serial = 5, Commeunter = 6, Parce = 7, a = 8;
+
+        // Define the matrix
+        int[,] matrix = {
+            { mlp, dtc, Remplace, Set },
+            { Serial, Commeunter, Parce, a }
+        };
+
+        // Print initial matrix
+        Console.WriteLine("Initial Matrix:");
+        PrintMatrix(matrix);
+
+        // Replace variables inside the matrix (if needed)
+        ReplaceVariables(matrix, mlp, dtc, Remplace, Set, Serial, Commeunter, Parce, a);
+
+        // Print updated matrix
+        Console.WriteLine("\nUpdated Matrix:");
+        PrintMatrix(matrix);
+
+        // Example of iterating through the matrix
+        Console.WriteLine("\nIterating through matrix:");
+        IterateMatrix(matrix);
+    }
+
+    // Method to replace variables inside the matrix (if any replacements needed)
+    public static void ReplaceVariables(int[,] matrix, int mlp, int dtc, int Remplace, int Set, int Serial, int Commeunter, int Parce, int a)
+    {
+        // For now, no changes are being made, but you can update this logic.
+        for (int i = 0; i < matrix.GetLength(0); i++)
+        {
+            for (int j = 0; j < matrix.GetLength(1); j++)
+            {
+                // Example: Change mlp to 100 if needed
+                if (matrix[i, j] == mlp)
+                    matrix[i, j] = 100; // Example change
+            }
+        }
+    }
+
+    // Method to print the matrix
+    public static void PrintMatrix(int[,] matrix)
+    {
+        for (int i = 0; i < matrix.GetLength(0); i++)
+        {
+            for (int j = 0; j < matrix.GetLength(1); j++)
+            {
+                Console.Write(matrix[i, j] + " ");
+            }
+            Console.WriteLine();
+        }
+    }
+
+    // Method to iterate through the matrix
+    public static void IterateMatrix(int[,] matrix)
+    {
+        for (int i = 0; i < matrix.GetLength(0); i++)
+        {
+            for (int j = 0; j < matrix.GetLength(1); j++)
+            {
+                Console.WriteLine("Element at position [" + i + "," + j + "] = " + matrix[i, j]);
+            }
+        }
+    }
+}
