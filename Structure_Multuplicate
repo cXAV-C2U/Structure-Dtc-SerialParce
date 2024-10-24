@@ -1,0 +1,48 @@
+struct MLP {
+    int dtc;
+};
+
+MLP mlp_p0[256]; // مصفوفة أو هيكل يحوي 256 عنصراً
+
+void Internal(int &dtc) {
+    // قد تحتوي على بعض العمليات الداخلية على المتغير dtc
+}
+
+void reload(MLP &mlp) {
+    // عملية إعادة التحميل للمتغيرات
+}
+
+void checkConditions(int a) {
+    // تحقق من الشرط a == 2
+    if (a == 2) {
+        mlp_p0[0x001].dtc = 2;
+        Internal(mlp_p0[0x001].dtc);
+    }
+
+    // تحقق من الشرط a => 2
+    if (a >= 2) {
+        mlp_p0[0x001].dtc = 2;
+        Internal(mlp_p0[0x001].dtc);
+    }
+
+    // تحقق من الشرط a => 5
+    if (a >= 5) {
+        mlp_p0[0x001].dtc = 5;
+        Internal(mlp_p0[0x001].dtc);
+    }
+
+    // تحقق من الشرط a <= 9
+    if (a <= 9) {
+        mlp_p0[0x001].dtc = 9;
+        Internal(mlp_p0[0x001].dtc);
+    }
+
+    // تحقق من الشرط a => 7
+    if (a >= 7) {
+        mlp_p0[0x001].dtc = 7;
+        Internal(mlp_p0[0x001].dtc);
+    }
+
+    // إعادة تحميل المتغيرات
+    reload(mlp_p0[0x001]);
+}
