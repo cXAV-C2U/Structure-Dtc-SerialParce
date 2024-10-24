@@ -1,0 +1,30 @@
+// Define a structure for handling serial data
+struct SerialParce {
+    uint8_t mlp[256]; // Adjust size based on your needs
+};
+
+// Create an array to hold SerialParce structures
+SerialParce Serial_Parce[10]; // Adjust size based on your needs
+
+// Create an array for replacements
+uint8_t Dtc_Remplace[10]; // Adjust size based on your needs
+
+// Function to process serial data
+void ProcessSerialData() {
+    // Replace with data from serial
+    Dtc_Remplace[0] = Serial[n]; // Replace with the corresponding index or value
+    Dtc_Remplace[1] = Serial[a];
+    Dtc_Remplace[2] = Serial[a];
+    Dtc_Remplace[3] = Serial[a];
+    Dtc_Remplace[4] = Serial[a];
+    Dtc_Remplace[5] = Serial[a];
+    Dtc_Remplace[6] = Serial[a];
+
+    // If needed, access Serial_Parce similarly
+    Serial_Parce[0].mlp[0] = 0x00; // Example usage
+    Serial_Parce[1].mlp[0] = 0x00; // Example usage
+    // Add more as needed
+}
+
+// Example Serial array (assuming you have this)
+uint8_t Serial[256]; // Adjust size based on your needs
